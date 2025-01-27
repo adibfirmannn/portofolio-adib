@@ -1,0 +1,64 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  flex: 1; /* Membuat bagian utama fleksibel */
+}
+
+footer {
+  padding: 1rem 0;
+  background-color: #212529;
+}
+
+#home {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+/* button */
+.btn-primary {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+
+.btn-primary:hover {
+  background-color: #a00000 !important;
+  border-color: #a00000 !important;
+}
+
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #660000 !important;
+  border-color: #660000 !important;
+  box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.5) !important;
+}
+
+/* akhir button */
+
+/* icon */
+.social i {
+  color: #e5e5e5;
+  font-size: 18px;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+.social i:hover {
+  color: #800000;
+  transform: rotate(360deg);
+}
+/* icon akhir */
+
+section {
+  scroll-margin-top: 70px;
+}
