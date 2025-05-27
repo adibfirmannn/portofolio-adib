@@ -9,265 +9,350 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <title>Project Blog - Muhammad Adib Firmansyah</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      padding: 10px 20px;
+      background-color: #800000;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      transform: translateX(-5px);
+      color: white;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 400px;
+      object-fit: contain;
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+
+    .project-content {
+      padding: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      background-color: #800000;
+      padding: 8px 15px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    .section-title {
+      color: #800000;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .feature-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .feature-list li i {
+      color: #800000;
+    }
+
+    .role-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .role-title {
+      color: #800000;
+      font-weight: 600;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    footer {
+      background: #212529;
+      padding: 20px 0;
+      color: white;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #800000;
+    }
+  </style>
 </head>
 <body>
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top p-3">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Muhammad Adib Firmansyah</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- akhir navbar -->
-  <main style="margin-top: 90px;">
-    <section class="container py-5">
+  <a href="index.html" class="back-button">
+    <i class="bi bi-arrow-left"></i>
+    Back to Portfolio
+  </a>
+
+  <main style="margin-top: 40px;">
+    <div class="container py-5">
       <div class="row mb-5">
         <div class="col text-center">
-          <h2>Project Blog</h2>
-          <p class="text-muted">Detail explanation about my projects</p>
+          <h2 class="section-title display-4">Project Details</h2>
+          <p class="text-muted lead">Detailed explanation of my projects</p>
         </div>
       </div>
+
       <!-- Project Pinjam Buku -->
-      <div id="pinjambuku" class="row mb-5 align-items-center">
-        <div class="col-md-6 mb-3 mb-md-0">
-          <img src="img/projects/project-1.png" alt="Pinjambuku" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-6">
-          <h3 class="mb-2" style="color: #800000;">Pinjambuku</h3>
-          <div class="mb-2">
-            <span class="badge" style="background-color: #800000;">Laravel</span>
-            <span class="badge" style="background-color: #800000;">Bootstrap</span>
-            <span class="badge" style="background-color: #800000;">MySQL</span>
+      <div id="pinjambuku" class="project-card">
+        <img src="img/projects/project-1.png" alt="Pinjambuku" class="project-image">
+        <div class="project-content">
+          <h3 class="section-title">Pinjambuku</h3>
+          <div class="mb-4">
+            <span class="badge">Laravel</span>
+            <span class="badge">Bootstrap</span>
+            <span class="badge">MySQL</span>
           </div>
-          <p>Pinjambuku adalah aplikasi peminjaman buku yang memudahkan pengguna untuk mencari, meminjam, dan mengelola buku secara online. Aplikasi ini dirancang dengan fokus pada kemudahan penggunaan, keamanan, dan efisiensi proses peminjaman.</p>
+          
+          <h5 class="section-title h6">Project Overview</h5>
+          <p class="mb-4">
+            Pinjambuku adalah aplikasi peminjaman buku yang memudahkan pengguna untuk mencari, meminjam, dan mengelola buku secara online. 
+            Aplikasi ini dirancang dengan fokus pada kemudahan penggunaan, keamanan, dan efisiensi proses peminjaman.
+          </p>
+
+          <h5 class="section-title h6">User Roles</h5>
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <div class="role-card">
+                <h6 class="role-title">
+                  <i class="bi bi-person"></i>
+                  Mahasiswa
+                </h6>
+                <ul class="feature-list">
+                  <li><i class="bi bi-check-circle"></i> Mencari dan melihat daftar buku</li>
+                  <li><i class="bi bi-check-circle"></i> Meminjam buku</li>
+                  <li><i class="bi bi-check-circle"></i> Melihat riwayat peminjaman</li>
+                  <li><i class="bi bi-check-circle"></i> Mengelola profil</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="role-card">
+                <h6 class="role-title">
+                  <i class="bi bi-person-gear"></i>
+                  Admin
+                </h6>
+                <ul class="feature-list">
+                  <li><i class="bi bi-check-circle"></i> Mengelola data buku</li>
+                  <li><i class="bi bi-check-circle"></i> Memverifikasi peminjaman</li>
+                  <li><i class="bi bi-check-circle"></i> Mengelola kategori buku</li>
+                  <li><i class="bi bi-check-circle"></i> Mengelola profil</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <h5 class="section-title h6">Key Features</h5>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="feature-list">
+                <li><i class="bi bi-shield-check"></i> Sistem autentikasi yang aman</li>
+                <li><i class="bi bi-search"></i> Pencarian buku yang mudah</li>
+                <li><i class="bi bi-cart"></i> Keranjang peminjaman</li>
+
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="feature-list">
+                <li><i class="bi bi-person-circle"></i> Manajemen profil pengguna</li>
+                <li><i class="bi bi-book"></i> Katalog buku</li>
+                <li><i class="bi bi-clock-history"></i> Tracking status peminjaman</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row mb-4">
-        <div class="col">
-          <h5 class="mb-3" style="color: #800000;">Fitur Utama</h5>
-        </div>
-      </div>
-      <div class="row g-4 mb-5">
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project1-login.png" class="card-img-top" alt="Login">
-            <div class="card-body">
-              <h6 class="card-title">Login & Autentikasi</h6>
-              <p class="card-text">Pengguna dapat login dengan akun terdaftar untuk mengakses fitur peminjaman dan dashboard pribadi secara aman.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project1-dashboard-mahasiswa.png" class="card-img-top" alt="Dashboard Mahasiswa">
-            <div class="card-body">
-              <h6 class="card-title">Dashboard Mahasiswa</h6>
-              <p class="card-text">Dashboard Mahasiswa menampilkan daftar buku yang bisa di pinjam oleh mahasiswa</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project1-borrow.png" class="card-img-top" alt="Peminjaman Buku">
-            <div class="card-body">
-              <h6 class="card-title">Peminjaman Buku</h6>
-              <p class="card-text">Fitur peminjaman buku, untuk menambahkan buku yang di pinjam ke keranjang</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row g-4 mb-5">
-        <div class="col-md-6">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project1-cart.png" class="card-img-top" alt="Keranjang Buku">
-            <div class="card-body">
-              <h6 class="card-title">Keranjang Buku</h6>
-              <p class="card-text">Mahasiswa dapat menambahkan beberapa buku ke keranjang sebelum melakukan peminjaman sekaligus.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project1-historypeminjaman.png" class="card-img-top" alt="Riwayat Peminjaman">
-            <div class="card-body">
-              <h6 class="card-title">Riwayat Peminjaman</h6>
-              <p class="card-text">Fitur untuk melihat riwayat peminjaman buku yang pernah dilakukan oleh Mahasiswa, lengkap dengan status pengembalian.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <!-- Project Buster -->
-      <div id="buster" class="row mb-5 align-items-center flex-md-row-reverse">
-        <div class="col-md-6 mb-3 mb-md-0">
-          <img src="img/projects/project-2.png" alt="Buster" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-6">
-          <h3 class="mb-2" style="color: #800000;">Buster</h3>
-          <div class="mb-2">
-            <span class="badge" style="background-color: #800000;">Laravel</span>
-            <span class="badge" style="background-color: #800000;">Bootstrap</span>
-            <span class="badge" style="background-color: #800000;">MySQL</span>
-            <span class="badge" style="background-color: #800000;">Midtrans</span>
+      <div id="buster" class="project-card">
+        <img src="img/projects/project-2.png" alt="Buster" class="project-image">
+        <div class="project-content">
+          <h3 class="section-title">Buster</h3>
+          <div class="mb-4">
+            <span class="badge">Laravel</span>
+            <span class="badge">Bootstrap</span>
+            <span class="badge">MySQL</span>
           </div>
-          <p>Buster adalah aplikasi pemesanan tiket bus yang memudahkan pengguna untuk mencari, memesan, dan membayar tiket bus secara online. Aplikasi ini dirancang untuk memberikan pengalaman pemesanan yang cepat, aman, dan nyaman bagi pengguna.</p>
+          
+          <h5 class="section-title h6">Project Overview</h5>
+          <p class="mb-4">
+            Buster adalah aplikasi pemesanan tiket bus yang memudahkan pengguna untuk mencari, memesan, dan membayar tiket bus secara online. 
+            Aplikasi ini dirancang untuk memberikan pengalaman pemesanan yang cepat, aman, dan nyaman bagi pengguna.
+          </p>
+
+          <h5 class="section-title h6">User Roles</h5>
+          <div class="row mb-4">
+            <div class="col-md-4">
+              <div class="role-card">
+                <h6 class="role-title">
+                  <i class="bi bi-person"></i>
+                  Penumpang
+                </h6>
+                <ul class="feature-list">
+                  <li><i class="bi bi-check-circle"></i> Mencari jadwal bus</li>
+                  <li><i class="bi bi-check-circle"></i> Memesan tiket</li>
+                  <li><i class="bi bi-check-circle"></i> Melakukan pembayaran</li>
+                  <li><i class="bi bi-check-circle"></i> Melihat riwayat perjalanan</li>
+                  <li><i class="bi bi-check-circle"></i> Mengelola profil</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="role-card">
+                <h6 class="role-title">
+                  <i class="bi bi-person-gear"></i>
+                  Admin
+                </h6>
+                <ul class="feature-list">
+                  <li><i class="bi bi-check-circle"></i> Melihat Laporan Penjualan</li>
+                  <li><i class="bi bi-check-circle"></i> Mengelola Supir</li>
+                  <li><i class="bi bi-check-circle"></i> Mengelola Bus</li>
+                  <li><i class="bi bi-check-circle"></i> Mengelola Perjalanan</li>
+                  <li><i class="bi bi-check-circle"></i> Melihat Ulasan</li>
+                  <li><i class="bi bi-check-circle"></i> Melihat Inspeksi</li>
+                  <li><i class="bi bi-check-circle"></i> Mengelola profil</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="role-card">
+                <h6 class="role-title">
+                  Supir
+                </h6>
+                <ul class="feature-list">
+                  <li><i class="bi bi-check-circle"></i>Melihat Jadwal</li>
+                  <li><i class="bi bi-check-circle"></i>Mengelola Inspeksi</li>
+                  <li><i class="bi bi-check-circle"></i>Melihat Ulasan</li>
+                  <li><i class="bi bi-check-circle"></i>Mengelola Profil Bus</li>
+                  <li><i class="bi bi-check-circle"></i>Mengelola Profil</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+                    <h5 class="section-title h6">Key Features</h5>
+           <div class="row">
+             <div class="col-md-6">
+               <ul class="feature-list">
+                 <li><i class="bi bi-calendar-check"></i> Manajemen Jadwal Perjalanan</li>
+                 <li><i class="bi bi-person-badge"></i> Manajemen Supir</li>
+                 <li><i class="bi bi-bus-front"></i> Manajemen Bus</li>
+                 <li><i class="bi bi-search"></i> Pencarian Jadwal</li>
+                 <li><i class="bi bi-ticket-perforated"></i> Pemesanan Tiket</li>
+               </ul>
+             </div>
+             <div class="col-md-6">
+               <ul class="feature-list">
+                 <li><i class="bi bi-clipboard-check"></i> Sistem Inspeksi Bus</li>
+                 <li><i class="bi bi-star"></i> Sistem Ulasan</li>
+                 <li><i class="bi bi-person-circle"></i> Manajemen Profil</li>
+                 <li><i class="bi bi-graph-up"></i> Laporan Penjualan</li>
+                 <li><i class="bi bi-clock-history"></i> Riwayat Perjalanan</li>
+               </ul>
+             </div>
+           </div>
         </div>
       </div>
-      <div class="row mb-4">
-        <div class="col">
-          <h5 class="mb-3" style="color: #800000;">Fitur Utama</h5>
-        </div>
-      </div>
-      <div class="row g-4 mb-5">
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project2-login.png" class="card-img-top" alt="Login Buster">
-            <div class="card-body">
-              <h6 class="card-title">Login & Autentikasi</h6>
-              <p class="card-text">Pengguna dapat login untuk mengakses fitur pemesanan tiket, melihat riwayat transaksi, dan mengelola data pribadi secara aman.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project2-searching-tiket.png" class="card-img-top" alt="Pencarian Tiket">
-            <div class="card-body">
-              <h6 class="card-title">Pencarian & Pemesanan Tiket</h6>
-              <p class="card-text">Fitur pencarian tiket bus berdasarkan rute, tanggal, dan waktu keberangkatan. Proses pemesanan tiket yang mudah dan cepat.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project2-pilihkursi.png" class="card-img-top" alt="Pilih Kursi">
-            <div class="card-body">
-              <h6 class="card-title">Pilih Kursi</h6>
-              <p class="card-text">Pengguna dapat memilih kursi secara real-time sesuai ketersediaan, memastikan kenyamanan selama perjalanan.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row g-4 mb-5">
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project2-data-penumpang.png" class="card-img-top" alt="Data Penumpang">
-            <div class="card-body">
-              <h6 class="card-title">Input Data Penumpang</h6>
-              <p class="card-text">Fitur untuk mengisi data penumpang secara detail sebelum melakukan pembayaran tiket.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project2-review-transaksi.png" class="card-img-top" alt="Review Transaksi">
-            <div class="card-body">
-              <h6 class="card-title">Review & Konfirmasi Transaksi</h6>
-              <p class="card-text">Pengguna dapat meninjau kembali detail pesanan sebelum melakukan pembayaran untuk memastikan data sudah benar.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project2-pembayaran-tiket.png" class="card-img-top" alt="Pembayaran Tiket">
-            <div class="card-body">
-              <h6 class="card-title">Pembayaran Tiket</h6>
-              <p class="card-text">Mendukung pembayaran tiket secara online dengan berbagai metode pembayaran yang aman dan mudah.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <!-- Project Madang -->
-      <div id="madang" class="row mb-5 align-items-center">
-        <div class="col-md-6 mb-3 mb-md-0">
-          <img src="img/projects/project-3.png" alt="Madang" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-6">
-          <h3 class="mb-2" style="color: #800000;">Madang</h3>
-          <div class="mb-2">
-            <span class="badge" style="background-color: #800000;">React Native</span>
+      <div id="madang" class="project-card">
+        <img src="img/projects/project-3.png" alt="Madang" class="project-image">
+        <div class="project-content">
+          <h3 class="section-title">Madang</h3>
+          <div class="mb-4">
+            <span class="badge">React Native</span>
+            <span class="badge">Express.js</span>
+            <span class="badge">MongoDB</span>
           </div>
-          <p>Madang adalah aplikasi mobile untuk manajemen gudang yang memudahkan pengelolaan stok, tracking barang, dan laporan inventaris.</p>
+          
+          <h5 class="section-title h6">Project Overview</h5>
+          <p class="mb-4">
+            Madang adalah aplikasi mobile untuk manajemen gudang yang memudahkan pengelolaan stok, tracking barang, dan laporan inventaris.
+            Aplikasi ini membantu bisnis dalam mengoptimalkan pengelolaan gudang mereka.
+          </p>
+
+                    <h5 class="section-title h6">User Roles</h5>
+           <div class="row mb-4">
+             <div class="col-md-12">
+               <div class="role-card">
+                 <h6 class="role-title">
+                   <i class="bi bi-person-gear"></i>
+                   Admin
+                 </h6>
+                 <ul class="feature-list">
+                   <li><i class="bi bi-check-circle"></i> Melihat Dashboard</li>
+                   <li><i class="bi bi-check-circle"></i> Mengelola Product</li>
+                   <li><i class="bi bi-check-circle"></i> Mengelola Profil</li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+
+           <h5 class="section-title h6">Key Features</h5>
+           <div class="row">
+             <div class="col-md-6">
+               <ul class="feature-list">
+                 <li><i class="bi bi-speedometer2"></i> Dashboard Informatif</li>
+                 <li><i class="bi bi-box-seam"></i> Manajemen Product</li>
+                 <li><i class="bi bi-person-circle"></i> Manajemen Profil</li>
+               </ul>
+             </div>
+           </div>
         </div>
       </div>
-      <div class="row mb-4">
-        <div class="col">
-          <h5 class="mb-3" style="color: #800000;">Fitur Utama</h5>
-        </div>
-      </div>
-      <div class="row g-4 mb-5">
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project3-login.png" class="card-img-top img-fluid rounded shadow" alt="Login Madang" style="object-fit:cover;aspect-ratio:4/3;width:100%;height:200px;">
-            <div class="card-body">
-              <h6 class="card-title">Login & Autentikasi</h6>
-              <p class="card-text">Fitur login yang aman untuk mengakses aplikasi manajemen gudang.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project3-dashboard.png" class="card-img-top img-fluid rounded shadow" alt="Dashboard Madang" style="object-fit:cover;aspect-ratio:4/3;width:100%;height:200px;">
-            <div class="card-body">
-              <h6 class="card-title">Dashboard</h6>
-              <p class="card-text">Dashboard interaktif untuk memantau stok dan aktivitas gudang secara real-time.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project3-products.png" class="card-img-top img-fluid rounded shadow" alt="Daftar Produk" style="object-fit:cover;aspect-ratio:4/3;width:100%;height:200px;">
-            <div class="card-body">
-              <h6 class="card-title">Daftar Produk</h6>
-              <p class="card-text">Fitur untuk melihat dan mengelola daftar produk dalam gudang.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row g-4 mb-5">
-        <div class="col-md-6">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project3-create-product.png" class="card-img-top img-fluid rounded shadow" alt="Tambah Produk">
-            <div class="card-body">
-              <h6 class="card-title">Tambah Produk</h6>
-              <p class="card-text">Fitur untuk menambahkan produk baru ke dalam sistem manajemen gudang.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card h-100 shadow">
-            <img src="img/blog/blog-project3-detail-product.png" class="card-img-top img-fluid rounded shadow" alt="Detail Produk">
-            <div class="card-body">
-              <h6 class="card-title">Detail Produk</h6>
-              <p class="card-text">Fitur untuk melihat detail lengkap produk, termasuk stok dan riwayat pergerakan.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
-  <footer class="text-white text-center">
-    <p>Created with <i class="bi bi-heart-pulse-fill text-danger"></i> by <a href="#" class="text-white fw-bold">Muhammad Adib Firmansyah</a></p>
+
+  <footer class="text-center">
+    <p class="mb-0">Created with <i class="bi bi-heart-pulse-fill text-danger"></i> by <a href="#" class="fw-bold">Muhammad Adib Firmansyah</a></p>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html> 
